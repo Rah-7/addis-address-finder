@@ -149,7 +149,7 @@
                 <span class="close-button" onclick="toggleForm('signin-form')">&times;</span>
                 <h2 class="form-title">Sign In</h2>
                 <form class="form" action="signin.php" method="POST">
-                    <!-- Add your sign-in form fields here -->
+                   
                     <input type="text" class="form-input" placeholder="Username" required>
                     <input type="password" class="form-input" placeholder="Password" required>
                     <button type="submit" class="form-button">Sign In</button>
@@ -164,7 +164,7 @@
                 <span class="close-button" onclick="toggleForm('contact-form')">&times;</span>
                 <h2 class="form-title">Contact Us</h2>
                 <form class="form" action="contact.php" method="POST">
-                    <!-- Add your contact form fields here -->
+                 
                     <input type="text" class="form-input" placeholder="Your Name" required>
                     <input type="email" class="form-input" placeholder="Your Email" required>
                     <textarea class="form-input" placeholder="Your Message" required></textarea>
@@ -179,7 +179,7 @@
                 <span class="close-button" onclick="toggleForm('signup-form')">&times;</span>
                 <h2 class="form-title">Sign Up</h2>
                 <form class="form" action="signup.php" method="POST">
-                    <!-- Add your sign-up form fields here -->
+                   
                     <input type="text" class="form-input" placeholder="Username" required>
                     <input type="email" class="form-input" placeholder="Email" required>
                     <input type="password" class="form-input" placeholder="Password" required>
@@ -200,7 +200,7 @@
             padding: 0;
         }
 
-        /* Existing CSS styles for navbar and form sections */
+    
 
         .addis-title {
             color: #2BA962;
@@ -251,12 +251,12 @@
     </script>
 </head>
 <body>
-    <!-- Navigation Bar and Form sections code -->
+    
 
     <div class="addis-title">ADDIS ADDRES FINDER</div>
     <div class="find-address">Find any address effortlessly!</div>
 
-    <!-- Add your remaining HTML code here -->
+ 
     
 </body>
 </html>
@@ -310,7 +310,7 @@
 }
 
 .input-field {
-  width: 400px;
+  width: 800px;
   height: 60px;
   padding: 10px;
   font-size: 24px;
@@ -324,7 +324,7 @@
   background-color: #9FD8D8;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding:5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -338,17 +338,14 @@
 <script>
 function searchAddress() {
   var institutionName = document.querySelector('.input-field').value;
-  // Perform search operation with the institutionName
-  // Replace the comment above with your address search code
-  // You can use API calls or any other method to retrieve the address based on the institution name
-  // For simplicity, let's just log the institution name in the console
+ 
   console.log(institutionName);
 }
 </script>
 </head>
 <body>
 <div class="button-container">
-  <input type="text" class="input-field institution" placeholder="Type name of the institution">
+  <input type="text" class="input-field institution" placeholder="Please enter the institution name to search">
   <button class="button search" onclick="searchAddress()">Search</button>
 </div>
 </body>
@@ -366,15 +363,13 @@ function searchAddress() {
     width: 100%;
 }
 </style>
-          <!-- Footer -->
+         
     <div class="footer">
         <p>All Rights Reserved 2023</p>
     </div>
 </body>
 </html>
-    
-        <!-- Add your remaining HTML code here -->
-        
+
        
        
        

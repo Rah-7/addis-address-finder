@@ -5,10 +5,8 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 // Show all signup information
-echo "<h2>Try to signup:</h2>";
-echo "<p>user name: " . $user_name . "</p>";
-echo "<p>email: " . $email . "</p>";
-echo "<p>password: " . $password . "</p>";
+echo "<h2>signup information:</h2>";
+
 
 $sql = "INSERT INTO users_list (user_name, email, password)
         VALUES ('$user_name', '$email', '$password')";

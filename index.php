@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .topnav {
             display: flex;
@@ -110,12 +111,12 @@
     <!-- Navigation Bar -->
     <div class="topnav">
         <div class="navbar-links">
-            <a class="navbar-link" href="#">Home</a>
+			 <a class="navbar-link" href="#">Home</a>
             <a class="navbar-link" href="javascript:void(0);" onclick="toggleForm('signin-form')">Sign In</a>
             <a class="navbar-link" href="javascript:void(0);" onclick="toggleForm('contact-form')">Contact Us</a>
         </div>
     </div>
-	
+	     	 
     <!-- Sign In Form -->
     <div id="signin-form" class="form-section" style="display: none;">
         <div class="form-container">
@@ -331,9 +332,9 @@ function searchAddress() {
   <details>
     <summary>Click here to search Addis Ababa city Addminstration</summary>
     <p>Please enter sub city name here:</p>
-    <input type="text" id="subcity" name="subcity_name"><br><br>
+    <input type="text" id="subcity" name="subcity_name"required><br><br>
     <p>Please enter main or wereda number:</p>
-    <input type="text" id="wereda" name="wereda"><br><br>
+    <input type="text" id="wereda" name="wereda"required><br><br>
   <input type="submit" value="Submit">
   </details><br><br>
 </form>
@@ -341,123 +342,78 @@ function searchAddress() {
   <details>
     <summary>Click here to suggest new address</summary>
     <p>Please enter institution name to suggest new address here:</p>
-    <input type="text" id="institution_name" name="institution_name"><br><br>
+    <input type="text" id="institution_name" name="institution_name"required><br><br>
     <p>Please enter detail address here:</p>
-    <input type="text" id="detail_address" name="new_detail_address"><br><br>
+    <input type="text" id="detail_address" name="new_detail_address"required><br><br>
     <input type="submit" value="Submit">
   </details>
 </form>
 
-</html><br>
+</html>
 
 
+<br><br>
+<html>
+<head>
+  <style>
+    .accordion {
+      background-color: #f5f5f5;
+      color: #333;
+      cursor: pointer;
+      padding: 16px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+    }
 
-<style>
-.accordion {
-  background-color: #f5f5f5;
-  color: #333;
-  cursor: pointer;
-  padding: 16px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
+    .accordion-content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: white;
+    }
 
-.accordion-content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: white;
-}
+    .accordion-active .accordion {
+      background-color: #9FD8D8;
+      color: white;
+    }
 
-.accordion-active .accordion {
-  background-color: #2BA962;
-  color: white;
-}
+    .accordion-active .accordion-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <details>
+    <summary class="accordion">About Us</summary>
+    <div class="accordion-content">
+      <p>We are your go-to solution for address searches in Addis Ababa! We understand the value of your time and aim to save you precious minutes by eliminating tedious searches and phone calls. With Addis Address Finder, easily locate the address you need, helping you navigate the city efficiently. We ensure an up-to-date and accurate address database, providing you with the most reliable information.</p>
+    </div>
+  </details>
 
-.accordion-active .accordion-content {
-  display: block;
-}
-</style>
+  <script>
+    function toggleAccordion() {
+      this.parentElement.classList.toggle("accordion-active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
 
-<script>
-function toggleAccordion() {
-  this.classList.toggle("accordion-active");
-}
-
-var accordion = document.getElementsByClassName("accordion");
-for (var i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", toggleAccordion);
-}
-</script>
-
-<details>
-  <summary class="accordion">About Us</summary>
-  <div class="accordion-content">
-    <p>We are your go-to solution for address searches in Addis Ababa! We understand the value of your time and aim to save you precious minutes by eliminating tedious searches and phone calls. With Addis Address Finder, easily locate the address you need, helping you navigate the city efficiently. We ensure an up-to-date and accurate address database, providing you with the most reliable information.</p>
-    
-  </div>
-</details>
+    var accordion = document.getElementsByClassName("accordion");
+    for (var i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener("click", toggleAccordion);
+    }
+  </script>
+</body>
+</html>
+<br><br><br>
 
 
-
-<style>
-.accordion {
-  background-color: #f5f5f5;
-  color: #333;
-  cursor: pointer;
-  padding: 16px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
-
-.accordion-content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: white;
-}
-
-.accordion-active .accordion {
-  background-color: #9FD8D8;
-  color: white;
-}
-
-.accordion-active .accordion-content {
-  display: block;
-}
-</style>
-
-<script>
-function toggleAccordion() {
-  this.parentElement.classList.toggle("accordion-active");
-  var content = this.nextElementSibling;
-  if (content.style.display === "block") {
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-  }
-}
-
-var accordion = document.getElementsByClassName("accordion");
-for (var i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", toggleAccordion);
-}
-</script>
-
-<div class="accordion">
-  <summary class="accordion-header">About Us</summary>
-  <div class="accordion-content">
-    <p>Your Go-To Solution for Address Searches in Addis Ababa!</p>
-    <p>We understand the value of your time, and our goal is to save you precious minutes by eliminating the need for tedious searches and phone calls. With Addis Address Finder, you can easily locate the address you are looking for, helping you to navigate the city efficiently and conveniently.</p>
-    <p>We strive to keep our address database up-to-date and accurate, ensuring that you have access to the most reliable information available. Using our search feature, you can quickly find addresses by entering keywords or using specific categories. We also provide additional details about each establishment to give you a better understanding of their services and offerings.</p>
-  </div>
-</div>
  
  <?php
  //include "searchkey-word.php";
@@ -483,10 +439,7 @@ for (var i = 0; i < accordion.length; i++) {
     </style>
 </head>
 <body>
-    <div class="content">
-        <!-- Your content here -->
-    </div>
-
+   
     <div class="footer">
         <p>Copyright © 2024 Addis Addres Finder. All Rights Reserved.</p>
     </div>
